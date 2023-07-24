@@ -9,6 +9,7 @@
  box-sizing: border-box;
  font-family: "Merriweather Sans", sans-serif;
 }
+
 body {
  margin: 0;
  padding: 0;
@@ -17,25 +18,30 @@ body {
  color: #333;
  background-color: #e7ebec;
 }
+
+/* @ Public Style */
 a {
  text-decoration: none;
  color: inherit;
 }
-a:hover {
- outline: 1px solid rgba(255, 255, 255, 0.8);
- border-radius: 0.1rem;
+nav,
+.__home_a {
+ a {
+  border-radius: 0.2rem;
+ }
+ a:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.8);
+ }
 }
-/* Navbar */
+
+/* @ Navigation Bar */
 nav {
  input,
  button {
   font-size: 0.8rem !important;
   height: 35px;
  }
- ul {
-  padding-left: auto;
- }
- .nav-links {
+ .top .nav-links {
   position: absolute;
   right: 1vw;
  }
@@ -43,14 +49,61 @@ nav {
   a {
    display: flex;
    align-items: center;
-   padding: 5px;
+   padding: 7px 10px;
+   font-size: 0.78rem;
+   &.active {
+    background: rgba(231, 231, 231, 0.1);
+   }
    i {
     margin-right: 6px;
    }
   }
  }
+ .menu-item {
+  a {
+   display: flex;
+   align-items: center;
+   padding: 7px;
+   margin: 15px 0;
+   font-size: 0.8rem;
+   &.active {
+    background-color: #e7e7e7;
+   }
+   &:hover {
+    outline-color: rgba(51, 51, 51, 0.5);
+   }
+   i {
+    margin-right: 6px;
+   }
+  }
+  a:first-child {
+   margin-top: 0;
+  }
+ }
 }
-/* Home */
+@media (max-width: 575px) {
+ .nav-item {
+  a {
+   padding: 0;
+   font-size: 0.6rem;
+  }
+ }
+}
+@media screen and (max-width: 767px) {
+ nav .right {
+  position: absolute;
+  right: 15px;
+ }
+}
+@media screen and (max-width: 950px) {
+ nav .nav-links {
+  a {
+   font-size: 0.6rem !important;
+  }
+  gap: 7px !important;
+ }
+}
+/* @ Home Container */
 .__home {
  .__home_a {
   width: 300px;
@@ -78,6 +131,6 @@ nav {
  }
  .__popular_products {
   margin-top: 3rem;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
  }
 }
