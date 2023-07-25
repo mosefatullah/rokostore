@@ -82,8 +82,101 @@
 
     <!-- @ Cart Container -->
     <div class="__cart d-flex">
-        <div class="container">
-            Empty cart
+        <div class="container-sm p-5 px-1">
+            <div class="__cart_empty text-center d-none">
+                <img src="../assets/images/empty_cart.png" alt="Cart is Empty" width="250">
+                <h2 class="fw-lighter">Your Cart is Empty!</h2>
+                <p>Looks like you haven't made order yet.</p>
+                <br>
+                <a href="../"><button class="btn btn-dark btn-sm">Return to home</button></a>
+            </div>
+            <div class="__cart_body row row-gap-3 gap-3">
+                <div class="col-12 col-md-6 p-0">
+                    <div class="top box clearfix shadow-sm">
+                        <div class="selectItem float-start form-check">
+                            <input class="form-check-input" type="checkbox" id="selectAllCart">
+                            <label class="form-check-label" for="selectAllCart">
+                                Select All <span>(1 Item)</span>
+                            </label>
+                        </div>
+                        <div class="amount float-end">Mo, your total: 225 Tk.</div>
+                    </div>
+                    <div class="middle box shadow-sm">
+                        <ul class="list-unstyled">
+                            <li class="bg-warning-subtle">
+                                <div class="left">
+                                    <input class="form-check-input" type="checkbox" id="selectCart1" checked>
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                        alt="">
+                                </div>
+                                <div class="right">
+                                    <h5>HP Notebook</h5>
+                                    <p>HP Inc.</p>
+                                    <p>Laptops</p>
+                                    <div class="input-group">
+                                        <button type="button" class="btn btn-secondary btn-minus">-</button>
+                                        <input type="text" class="form-control text-center" value="1" readonly>
+                                        <button type="button" class="btn btn-secondary btn-plus">+</button>
+                                    </div>
+                                    <p>225 Tk.</p>
+                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash m-0" aria-hidden="true"></i></button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <input class="form-check-input" type="checkbox" id="selectCart1">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                        alt="">
+                                </div>
+                                <div class="right">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa
+                                        tempore rem odio asperiores iste, iure, odit non ipsa quasi cum, officia error.
+                                        At error iure fugiat unde possimus dignissimos?</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                          const btnPlus = document.querySelector(".btn-plus");
+                          const btnMinus = document.querySelector(".btn-minus");
+                          const quantityInput = document.querySelector("li .form-control");
+                      
+                          btnPlus.addEventListener("click", function() {
+                            const currentValue = parseInt(quantityInput.value);
+                            quantityInput.value = currentValue + 1;
+                          });
+                      
+                          btnMinus.addEventListener("click", function() {
+                            const currentValue = parseInt(quantityInput.value);
+                            if (currentValue > 1) {
+                              quantityInput.value = currentValue - 1;
+                            }
+                          });
+                        });
+                      </script>
+                    <div class="bottom box shadow-sm">
+                        <p class="text-secondary"><i class="fa-solid fa-circle-info"></i> Apply promo code on the
+                            shipping page</p>
+                        <div class="d-flex w-100 justify-content-end gap-3">
+                            <button class="btn btn-outline-success btn-sm rounded-0">Place Order Later</button>
+                            <button class="btn btn-warning btn-sm rounded-0">Go to Shipping Page</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 box boxCartInfo shadow-sm">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-hand-holding-dollar"></i> Cash on Delivery Available</li>
+                        <li><i class="fa fa-person-walking-arrow-loop-left" aria-hidden="true"></i> 7 Days Replacement
+                            Policy
+                        </li>
+                        <li><i class="fa fa-money-check-dollar" aria-hidden="true"></i> 100% Money Back Guarantee</li>
+                        <li><i class="fa fa-credit-card" aria-hidden="true"></i> Purchase & Earn Points</li>
+                        <li><i class="fa fa-circle-check"></i> 100% Original Product</li>
+                    </ul>
+
+                </div>
+            </div>
         </div>
     </div>
 
