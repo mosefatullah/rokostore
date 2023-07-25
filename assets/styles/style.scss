@@ -165,9 +165,19 @@ nav {
   .boxCartInfo {
    border-radius: 0.25rem;
   }
+  .top .selectItem span {
+   font-weight: bold;
+  }
   .middle {
    margin-top: 15px;
    padding: 0;
+   ul {
+    margin: 0;
+   }
+   li.active,
+   li:active {
+    background-color: rgb(255, 240, 213);
+   }
    li {
     user-select: none;
     display: flex;
@@ -195,6 +205,11 @@ nav {
       text-align: right;
       .cartPrice {
        padding: 10px 0;
+       del {
+        color: rgb(223, 26, 26);
+        margin-right: 6px;
+        font-size: 0.64rem;
+       }
       }
       .cartDelete {
        padding: 0px 5px;
@@ -241,11 +256,49 @@ nav {
 }
 @media screen and (max-width: 1200px) {
  .__cart_body {
+  .top {
+   font-size: 0.7rem !important;
+  }
   .middle {
    li {
-    font-size: 0.7rem !important;
+    font-size: 0.67rem !important;
+    .left {
+     img {
+      width: 50px !important;
+     }
+    }
+    .toRight {
+     min-width: 80px !important;
+    }
     h5 {
      font-size: 0.8rem !important;
+    }
+   }
+  }
+ }
+}
+@media screen and (max-width: 700px) {
+ .__card .container-sm {
+  padding: 0 !important;
+ }
+ .__cart_body {
+  font-size: 0.7rem !important;
+  .bottom button {
+   font-size: 0.6rem !important;
+  }
+  .top {
+   font-size: 0.6rem !important;
+  }
+  .middle {
+   li {
+    font-size: 0.6rem !important;
+    .left {
+     img {
+      width: 40px !important;
+     }
+    }
+    h5 {
+     font-size: 0.7rem !important;
     }
    }
   }
