@@ -29,32 +29,31 @@
             </a>
             <a href="#" class="px-2 py-1 text-center mx-2" style="font-size: 12px;min-width:76px">
                 <p class="m-0" style="color: #aaa">Deliver to</p>
-                <p class="m-0"><i class="fa fa-location-dot me-1" aria-hidden="true"></i> Dhaka</p>
+                <p class="m-0"><i class="fa fa-location-dot me-1"></i> Dhaka</p>
             </a>
             <div class="right d-flex">
                 <form action="../search/" class="mx-2" role="search">
                     <div class="input-group">
                         <input type="search" name="q" class="form-control d-none d-xl-inline" placeholder="Search here">
-                        <button class="btn btn-warning" type="submit"><i class="fa fa-search me-1"
-                                aria-hidden="true"></i><span class="d-none d-xl-inline">Search</span></button>
+                        <button class="btn btn-warning" type="submit"><i class="fa fa-search me-1"></i><span
+                                class="d-none d-xl-inline">Search</span></button>
                     </div>
                 </form>
                 <button class="btn btn-warning d-block d-md-none" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <i class="fa fa-bars"></i>
                 </button>
             </div>
 
             <ul class="nav-links d-none d-md-flex list-unstyled gap-4 m-1">
                 <li class="nav-item active">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-cart-shopping"
-                            aria-hidden="true"></i> Cart</a>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-cart-shopping"></i> Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a class="nav-link" href="../"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Settings</a>
+                    <a class="nav-link" href="#"><i class="fa fa-user"></i> Settings</a>
                 </li>
             </ul>
         </div>
@@ -66,14 +65,13 @@
             </div>
             <ul class="offcanvas-body list-unstyled">
                 <li class="menu-item active">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-cart-shopping"
-                            aria-hidden="true"></i> Cart</a>
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-cart-shopping"></i> Cart</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="../"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a class="nav-link" href="../"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li class="menu-item">
-                    <a class="nav-link" href="../settings/"><i class="fa fa-gear" aria-hidden="true"></i> Settings</a>
+                    <a class="nav-link" href="../settings/"><i class="fa fa-gear"></i> Settings</a>
                 </li>
             </ul>
         </div>
@@ -91,7 +89,7 @@
                 <a href="../"><button class="btn btn-dark btn-sm">Return to home</button></a>
             </div>
             <div class="__cart_body row row-gap-3 gap-3">
-                <div class="col-12 col-md-6 p-0">
+                <div class="col-12 col-lg-6 p-0">
                     <div class="top box clearfix shadow-sm">
                         <div class="selectItem float-start form-check">
                             <input class="form-check-input" type="checkbox" id="selectAllCart">
@@ -107,71 +105,118 @@
                                 <div class="left">
                                     <input class="form-check-input" type="checkbox" id="selectCart1" checked>
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
-                                        alt="">
+                                        alt="Product">
                                 </div>
                                 <div class="right">
-                                    <h5>HP Notebook</h5>
-                                    <p>HP Inc.</p>
-                                    <p>Laptops</p>
-                                    <div class="input-group">
-                                        <button type="button" class="btn btn-secondary btn-minus">-</button>
-                                        <input type="text" class="form-control text-center" value="1" readonly>
-                                        <button type="button" class="btn btn-secondary btn-plus">+</button>
+                                    <div class="toLeft">
+                                        <h5 class="cartTitle">HP Notebook Pro Max with 1.2mm Cables</h5>
+                                        <p class="cartAuthor">HP Inc.</p>
+                                        <p class="cartCategory">Laptops</p>
                                     </div>
-                                    <p>225 Tk.</p>
-                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash m-0" aria-hidden="true"></i></button>
+
+                                    <div class="toRight">
+                                        <div class="cartSize input-group input-group-sm">
+                                            <button type="button" class="btn btn-secondary btn-minus">-</button>
+                                            <span class="input-group-text input text-center border">1</span>
+                                            <button type="button" class="btn btn-secondary btn-plus">+</button>
+                                        </div>
+                                        <p class="cartPrice">225 Tk.</p>
+                                        <button class="cartDelete btn btn-sm btn-danger"><i
+                                                class="fa fa-trash m-0"></i></button>
+                                    </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="left">
                                     <input class="form-check-input" type="checkbox" id="selectCart1">
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
-                                        alt="">
+                                        alt="Product">
                                 </div>
                                 <div class="right">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa
-                                        tempore rem odio asperiores iste, iure, odit non ipsa quasi cum, officia error.
-                                        At error iure fugiat unde possimus dignissimos?</p>
+                                    <div class="toLeft">
+                                        <h5 class="cartTitle">HP Notebook Pro Max with 1.2mm Cables</h5>
+                                        <p class="cartAuthor">HP Inc.</p>
+                                        <p class="cartCategory">Laptops</p>
+                                    </div>
+
+                                    <div class="toRight">
+                                        <div class="cartSize input-group input-group-sm">
+                                            <button type="button" class="btn btn-secondary btn-minus">-</button>
+                                            <span class="input-group-text input text-center border">1</span>
+                                            <button type="button" class="btn btn-secondary btn-plus">+</button>
+                                        </div>
+                                        <p class="cartPrice">225 Tk.</p>
+                                        <button class="cartDelete btn btn-sm btn-danger"><i
+                                                class="fa fa-trash m-0"></i></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <input class="form-check-input" type="checkbox" id="selectCart1">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp"
+                                        alt="Product">
+                                </div>
+                                <div class="right">
+                                    <div class="toLeft">
+                                        <h5 class="cartTitle">HP Notebook Pro Max with 1.2mm Cables</h5>
+                                        <p class="cartAuthor">HP Inc.</p>
+                                        <p class="cartCategory">Laptops</p>
+                                    </div>
+
+                                    <div class="toRight">
+                                        <div class="cartSize input-group input-group-sm">
+                                            <button type="button" class="btn btn-secondary btn-minus">-</button>
+                                            <span class="input-group-text input text-center border">1</span>
+                                            <button type="button" class="btn btn-secondary btn-plus">+</button>
+                                        </div>
+                                        <p class="cartPrice">225 Tk.</p>
+                                        <button class="cartDelete btn btn-sm btn-danger"><i
+                                                class="fa fa-trash m-0"></i></button>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                          const btnPlus = document.querySelector(".btn-plus");
-                          const btnMinus = document.querySelector(".btn-minus");
-                          const quantityInput = document.querySelector("li .form-control");
-                      
-                          btnPlus.addEventListener("click", function() {
-                            const currentValue = parseInt(quantityInput.value);
-                            quantityInput.value = currentValue + 1;
-                          });
-                      
-                          btnMinus.addEventListener("click", function() {
-                            const currentValue = parseInt(quantityInput.value);
-                            if (currentValue > 1) {
-                              quantityInput.value = currentValue - 1;
-                            }
-                          });
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const cartItems = document.querySelectorAll(".__cart_body .middle li");
+                            cartItems.forEach(function (item) {
+                                const btnPlus = item.querySelector(".btn-plus");
+                                const btnMinus = item.querySelector(".btn-minus");
+                                const quantityInput = item.querySelector(".cartSize .input");
+
+                                btnPlus.addEventListener("click", function () {
+                                    const currentValue = parseInt(quantityInput.innerText);
+                                    quantityInput.innerText = currentValue + 1;
+                                });
+
+                                btnMinus.addEventListener("click", function () {
+                                    const currentValue = parseInt(quantityInput.innerText);
+                                    if (currentValue > 1) {
+                                        quantityInput.innerText = currentValue - 1;
+                                    }
+                                });
+                            });
                         });
-                      </script>
+                    </script>
                     <div class="bottom box shadow-sm">
                         <p class="text-secondary"><i class="fa-solid fa-circle-info"></i> Apply promo code on the
                             shipping page</p>
                         <div class="d-flex w-100 justify-content-end gap-3">
-                            <button class="btn btn-outline-success btn-sm rounded-0">Place Order Later</button>
-                            <button class="btn btn-warning btn-sm rounded-0">Go to Shipping Page</button>
+                            <a href="../"><button class="btn btn-outline-success btn-sm rounded-0">Place Order Later</button></a>
+                            <a href="#"><button class="btn btn-warning btn-sm rounded-0">Go to Shipping Page</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 box boxCartInfo shadow-sm">
+                <div class="col-12 col-lg-5 box boxCartInfo shadow-sm">
                     <ul class="list-unstyled">
                         <li><i class="fa fa-hand-holding-dollar"></i> Cash on Delivery Available</li>
-                        <li><i class="fa fa-person-walking-arrow-loop-left" aria-hidden="true"></i> 7 Days Replacement
+                        <li><i class="fa fa-person-walking-arrow-loop-left"></i> 7 Days Replacement
                             Policy
                         </li>
-                        <li><i class="fa fa-money-check-dollar" aria-hidden="true"></i> 100% Money Back Guarantee</li>
-                        <li><i class="fa fa-credit-card" aria-hidden="true"></i> Purchase & Earn Points</li>
+                        <li><i class="fa fa-money-check-dollar"></i> 100% Money Back Guarantee</li>
+                        <li><i class="fa fa-credit-card"></i> Purchase & Earn Points</li>
                         <li><i class="fa fa-circle-check"></i> 100% Original Product</li>
                     </ul>
 
