@@ -6,6 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
    selectedCartSize;
  }
 
+ /* Cart Go to Shipping Button */
+ var cartGoToShipping = function () {
+  if (selectedCartSize <= 0) {
+   document.querySelectorAll(".__cart_body .bottom button")[1].disabled = true;
+  } else if (selectedCartSize > 0) {
+   document.querySelectorAll(".__cart_body .bottom button")[1].disabled = false;
+  }
+ };
+ /* End Cart Go to Shipping Button */
+
  /* Cart Total */
  var cartPriceTotalMath = function () {
   let cartTotalPrice = document.querySelector(
@@ -42,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     else if (!item.checked && selectedCartSize >= 0) selectedCartSize--;
     cartPriceTotalMath();
     selectedCartSizeMath();
+    cartGoToShipping();
    });
   });
  };
@@ -62,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     cartPriceTotalMath();
     selectedCartSizeMath();
+    cartGoToShipping();
     return;
    } else {
     allCarts.forEach(function (item) {
@@ -71,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     cartPriceTotalMath();
     selectedCartSizeMath();
+    cartGoToShipping();
     return;
    }
   });
@@ -132,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
      selectedCartSize--;
     selectAllCart();
     selectedCartSizeMath();
+    cartGoToShipping();
    }, 200);
   });
  });
@@ -151,5 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
  };
  cartAutoSelected();
+ cartGoToShipping();
  /* End Cart Auto Selected */
 });
