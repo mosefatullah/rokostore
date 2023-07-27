@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping on rokostore</title>
+    <!-- Styling sheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <!-- Interactions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="../../app/shipping.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <!-- @ Navigation Bar -->
+    <nav class="navbar sticky-top bg-dark z-3 p-0">
+        <!-- @ Navigation Bar -> Top Bar -->
+        <div class="top w-100 px-3 p-2 d-flex text-white align-items-center">
+            <a class="navbar-brand" href="../">
+                <img src="../../assets/images/icon.png" alt="Logo" width="120" height="30">
+            </a>
+            <a href="#" class="px-2 py-1 text-center mx-2" style="font-size: 12px;min-width:76px">
+                <p class="m-0" style="color: #aaa">Deliver to</p>
+                <p class="m-0"><i class="fa fa-location-dot me-1"></i> Dhaka</p>
+            </a>
+            <div class="right d-flex">
+                <form action="../../search/" class="mx-2" role="search">
+                    <div class="input-group">
+                        <input type="search" name="q" class="form-control d-none d-xl-inline" placeholder="Search here">
+                        <button class="btn btn-warning" type="submit"><i class="fa fa-search me-1"></i><span
+                                class="d-none d-xl-inline">Search</span></button>
+                    </div>
+                </form>
+                <button class="btn btn-warning d-block d-md-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-links d-none d-md-flex list-unstyled gap-4 m-1">
+                <li class="nav-item active">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-cart-shopping"></i>
+                        Shipping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-user"></i> Settings</a>
+                </li>
+            </ul>
+        </div>
+        <!-- @ Navigation Bar -> Menu Bar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <ul class="offcanvas-body list-unstyled">
+                <li class="menu-item active">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-cart-shopping"></i>
+                        Shipping</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="../../"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="menu-item">
+                    <a class="nav-link" href="../../settings/"><i class="fa fa-gear"></i> Settings</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- @ Cart Container -->
+    <div class="__shipping d-flex">
+        <div class="container-sm p-5 px-1">
+            <!-- @ Shipping Page Empty -->
+            <div class="___empty text-center d-none">
+                <img src="../../assets/images/empty_cart.png" alt="Cart is Empty" width="250">
+                <h2 class="fw-lighter">Your Cart is Empty!</h2>
+                <p>Looks like you haven't made order yet.</p>
+                <br>
+                <a href="../../"><button class="btn btn-dark btn-sm">Return to home</button></a>
+            </div>
+            <!-- @ Shipping Page Show -->
+            <div class="___body row row-gap-3 gap-3">
+                <div class="col-12 col-lg-6 p-0">
+                    <!-- @ Shipping Page Show : Address -->
+                    <div class="top box box-1 p-0 clearfix shadow-sm">
+                        <h6 class="p-3 m-0 fw-normal">Shipping Address</h6>
+                        <ul class="list-group rounded-0">
+                            <li class="list-group-item active">
+                                <div class="d-flex">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                        <p>Dhaka</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>Name : Md Abdullah</p>
+                                        <p>Phone : 8801800000000</p>
+                                        <p>Demra West Union, Demra Thana, Dhaka - 1300</p>
+                                        <p>Demra, Dhaka, Bangladesh</p>
+                                    </div>
+                                    <a class="action" href="#"><i class="fa fa-edit"></i> Edit</a>
+                                    <a class="action" href="#"><i class="fa fa-trash"></i> Delete</a>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <p>Barisal</p>
+                                    </div>
+                                    <div class="address">
+                                        <p>Name : Md Huzaifa</p>
+                                        <p>Phone : 8801800000000</p>
+                                        <p>Barisal West Union, Barisal Thana, Barisal - 1300</p>
+                                        <p>Barisal, Bangladesh</p>
+                                    </div>
+                                    <a class="action" href="#"><i class="fa fa-edit"></i> Edit</a>
+                                    <a class="action" href="#"><i class="fa fa-trash"></i> Delete</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- @ Cart Page Show : Payment method -->
+                    <div class="bottom box box-2 mt-3 p-0 shadow-sm">
+                        <h6 class="p-3 m-0 fw-normal border-bottom">Payment Method</h6>
+                        <div class="p-4">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="paymentMethod"
+                                                    id="cashOnDelivery" value="Cash on Delivery" checked>
+                                                <label class="form-check-label" for="cashOnDelivery">
+                                                    <img src="../../assets/images/cod.png">
+                                                    Cash on Delivery
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="paymentMethod"
+                                                    id="nagad" value="Nagad">
+                                                <label class="form-check-label" for="nagad">
+                                                    <img src="../../assets/images/Nagad-Logo.png">
+                                                    Nagad
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="paymentMethod"
+                                                    id="bkash" value="bKash">
+                                                <label class="form-check-label" for="bkash">
+                                                    <img src="../../assets/images/bkash.png">
+                                                    bKash
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="paymentMethod"
+                                                    id="rocket" value="Rocket">
+                                                <label class="form-check-label" for="rocket">
+                                                    <img src="../../assets/images/rocket.png">
+                                                    Rocket
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="paymentMethod"
+                                                    id="visaMasterCard" value="Visa or Master Card">
+                                                <label class="form-check-label" for="visaMasterCard">
+                                                    <img src="../../assets/images/paypal.svg" type="image/svg+xml">
+                                                    Paypal
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Rokostore has vast supply to ensure maximum customer service. Products not in stock
+                                have to be procured from the supplier -</p>
+                            <p>1. If the supplier does not have the products you ordered, the remaining products will be
+                                shipped. In these cases you will be notified through email/SMS/phone.</p>
+                            <p>2. Product price may vary by supplier. In these cases you will be informed through
+                                Email/SMS/WhatsApp/Phone.হবে।
+                            </p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card rounded-0 border-end-0 border-start-0 p-4">
+                            <div class="text-end">
+                                <button class="btn btn-warning btn-sm">Proceed to confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 box box-3 p-0 shadow-sm">
+                    <div class="p-4">
+                        <h6>Checkout Summary</h6>
+                        <hr>
+                        <div class="d-flex">
+                            <p>Subtotal</p>
+                            <p class="ms-auto">225 TK.</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                            <p>Shipping <small>(Changeable)</small></p>
+                            <p class="ms-auto">48 TK.</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                            <p>Total</p>
+                            <p class="ms-auto">273 TK.</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                            <p class="fw-bold">Payable Total</p>
+                            <p class="ms-auto">273 TK.</p>
+                        </div>
+                    </div>
+                    <div class="card p-4 py-3">
+                        <p class="fw-bold">Add Promo code or voucher</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Your Promo Code">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center fw-bold p-3" style="color: #36ca51;font-size: 0.8rem;">You are saving 0%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

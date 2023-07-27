@@ -2,26 +2,24 @@ document.addEventListener("DOMContentLoaded", function () {
  var selectedCartSize = 0;
 
  function selectedCartSizeMath() {
-  document.querySelector(".__cart_body .top .selectItem span").innerText =
+  document.querySelector(".___body .top .selectItem span").innerText =
    selectedCartSize;
  }
 
  /* Cart Go to Shipping Button */
  var cartGoToShipping = function () {
   if (selectedCartSize <= 0) {
-   document.querySelectorAll(".__cart_body .bottom button")[1].disabled = true;
+   document.querySelectorAll(".___body .bottom button")[1].disabled = true;
   } else if (selectedCartSize > 0) {
-   document.querySelectorAll(".__cart_body .bottom button")[1].disabled = false;
+   document.querySelectorAll(".___body .bottom button")[1].disabled = false;
   }
  };
  /* End Cart Go to Shipping Button */
 
  /* Cart Total */
  var cartPriceTotalMath = function () {
-  let cartTotalPrice = document.querySelector(
-   ".__cart_body .top .cartPriceTotal"
-  );
-  let cartItemsTotal = document.querySelectorAll(".__cart_body .middle li");
+  let cartTotalPrice = document.querySelector(".___body .top .cartPriceTotal");
+  let cartItemsTotal = document.querySelectorAll(".___body .middle li");
   let totalPrice = 0;
   cartItemsTotal.forEach(function (item) {
    if (item.querySelector(".cartSelect").checked) {
@@ -41,9 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
  /* Cart Select */
  var selectOneCart = function () {
-  let cartSelect = document.querySelectorAll(
-   ".__cart_body .middle li .cartSelect"
-  );
+  let cartSelect = document.querySelectorAll(".___body .middle li .cartSelect");
   cartSelect.forEach(function (item) {
    item.addEventListener("click", function () {
     item.parentElement.parentElement.classList.toggle("active");
@@ -60,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
  var selectAllCart = function () {
   let selectAllBtn = document.getElementById("selectAllCart");
-  let allCarts = document.querySelectorAll(".__cart_body .middle li");
+  let allCarts = document.querySelectorAll(".___body .middle li");
   let totalCartNumber = document.querySelector(".selectItem b");
   totalCartNumber.innerText = allCarts.length;
   selectAllBtn.addEventListener("click", function () {
@@ -90,13 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (selectedCartSize <= 0) {
    document.getElementById("selectAllCart").checked = false;
    if (allCarts.length <= 0) {
-    document.querySelector(
-     ".__cart_body .top .selectItem input"
-    ).disabled = true;
+    document.querySelector(".___body .top .selectItem input").disabled = true;
    } else {
-    document.querySelector(
-     ".__cart_body .top .selectItem input"
-    ).disabled = false;
+    document.querySelector(".___body .top .selectItem input").disabled = false;
    }
   }
  };
@@ -105,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
  /* End Cart Select */
 
  /* Cart Size */
- let cartItems = document.querySelectorAll(".__cart_body .middle li");
+ let cartItems = document.querySelectorAll(".___body .middle li");
  cartItems.forEach(function (item) {
   let btnPlus = item.querySelector(".btn-plus");
   let btnMinus = item.querySelector(".btn-minus");
@@ -129,9 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
  /* End Cart Size */
 
  /* Cart Delete */
- let cartDelete = document.querySelectorAll(
-  ".__cart_body .middle li .cartDelete"
- );
+ let cartDelete = document.querySelectorAll(".___body .middle li .cartDelete");
  cartDelete.forEach(function (item) {
   item.addEventListener("click", function () {
    setTimeout(function () {
@@ -153,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
  /* Cart Auto Selected */
  var cartAutoSelected = function () {
-  let allCarts = document.querySelectorAll(".__cart_body .middle li");
+  let allCarts = document.querySelectorAll(".___body .middle li");
   selectedCartSize = allCarts.length;
   allCarts.forEach(function (item) {
    document.getElementById("selectAllCart").checked = true;
