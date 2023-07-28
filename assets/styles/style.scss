@@ -417,3 +417,22 @@ nav {
   }
  }
 }
+
+
+/* @ Order Confirm */
+.__orderconf {
+   .card {
+      p {
+         margin: 5px 0;
+      }
+      i {
+         margin-right: 15px;
+         color: cornflowerblue;
+         background-color: #e9e9e9;
+         width: 23px;
+         height: 23px;
+         border-radius: 100rem;
+         text-align: center;
+      }
+   }
+}
